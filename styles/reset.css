@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+/* se encarga del scroll al hacer click en una seccion*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* estilos del cuerpo */
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* estilos a los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    font-size: inherit;
+}
+
+/* estilos a los titulos */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, i, b, u, em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* estilos a los titulos */
+li {
+    list-style-type: none;
+}
+
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    display: block;
+  
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}

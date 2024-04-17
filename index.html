@@ -2,15 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sell Master</title>
-    <link rel="stylesheet" href="./public/styles/style.css">
-    <link rel="icon" href="./public/assets/ico/logo-sellmaster.ico">
+    <title>Fast Gym</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./assets/ico/fastgym-logo.ico">
 </head>
 <body>
     <header>
         <nav>
             <a href="#">
-                <img src="./public/assets/img/logo-sellmaster.png" alt="Logo-upc">
+                <img src="./assets/img/fastgym-logo.png" alt="Logo-upc">
             </a>
             <ul>
                 <li><a href="#product">Producto</a></li>
@@ -32,8 +32,8 @@
         <!-- Seccion principal -->
         <section class="hero-container">
             <div class="hero-text">
-                <h1>SELL MASTER</h1>
-                <p>¡Revoluciona la manera de gestionar tus ventas, inventarios y análisis de datos uniéndote a nosotros!</p>
+                <h1>Fast Gym</h1>
+                <p>¡Adquiere tus productos y plan de alimentación de acuerdo a tus objetivos!</p>
                 <a href="#">
                     <button class="btn-hero">Comenzar</button>
                 </a>
@@ -44,57 +44,62 @@
         <section class="card-container" id="product">
             <div class="text-wrapper">
                 <h2>¿Qué ofrecemos como empresa?</h2>
-                <p>Somos una empresa que se basa en revolucionar la manera en que las PYMEs gestionan sus ventas, inventarios y análisis de datos.</p>
+                <p>Fast Gym una aplicación móvil que permite a los usuarios adquirir productos deportivos, desde productos para cada deporte en específico, hasta suplementos para los amantes del gimnasio. Además, ofrecemos un plan de alimentación personalizado de acuerdo a tus objetivos.</p>
 
             </div>
 
             <div class="container-card">
                 <div class="element-card">
                     <div>
-                        <img src="./public/assets/img/icono-ventas.png" alt="img">
-                        <h3>Gestion de ventas mejorada</h3>
-                        <p>Con nuestra plataforma, podrás mejorar la gestion de tus ventas a través de un control de inventarios y análisis de datos.</p>
+                        <img src="./assets/img/fastgym-gordo.png" alt="img">
+                        <h3>¿Bajar de peso?</h3>
+                        <p>Si tu objetivo es bajar de peso, Fast Gym te ofrece un plan de alimentación personalizado de acuerdo a tus objetivos.</p>
                     </div>
-                    <button>
+                    <button data-target="section-bajar-peso">
+                        Conoce más aquí 
+                    </button>
+                </div>
+
+                
+                <div class="element-card">
+                    <div>
+                        <img src="./assets/img/fastgym-normal.png" alt="img">
+                        <h3>¿Mejorar tu rendimiento?</h3>
+                        <p>Si tu objetivo es mejorar tu rendimiento, Fast Gym te brinda lo ideal para mejorar tu rendimiento en el deporte que practiques.
+                    </div>
+                    <button data-target="section-mejorar-rendimiento">
                         Conoce más aquí 
                     </button>
                 </div>
 
                 <div class="element-card">
                     <div>
-                        <img src="./public/assets/img/empresa.png" alt="img">
-                        <h3>Expande el alcance de tu empresa</h3>
-                        <p>Con nuestra plataforma podrás expandir el alcance de tu empresa a distintos clientes, haciendo tu negocio más rentable.</p>
+                        <img src="./assets/img/fastgym-flaco.png" alt="img">
+                        <h3>¿Aumentar masa muscular?</h3>
+                        <p>Si tu objetivo es aumentar masa muscular, Fast Gym te ofrece los productos necesarios y el plan de alimentación adecuado para lograrlo.</p>
                     </div>
-                    <button>
+                    <button data-target="section-aumentar-musculatura">
                         Conoce más aquí 
                     </button>
                 </div>
 
-                <div class="element-card">
-                    <div>
-                        <img src="./public/assets/img/icono-trabajo.png" alt="img">
-                        <h3>Te ayudamos a encontrar trabajo en empresas de ventas</h3>
-                        <p>Con nuestra plataforma podrás encontrar trabajo en empresas de ventas, mejorando tu experiencia laboral.</p>
-                    </div>
-                    <button>
-                        Conoce más aquí 
-                    </button>
-                </div>
             </div>
 
         </section>
         
         <!-- Seccion de Nosotros -->
-        <section class="about-container" id="about">
+        <section id="about" class="about-container">
             <h2>¿Quiénes somos?</h2>
             <div class="about-content">
-                <img src="./public/assets/img/logo-sellmaster-2.png" alt="about-us">
+                <img src="./assets/img/fastgym-logo.png" alt="Equipo Fast Gym" class="about-image">
                 <div class="about-text">
-                    <p>Sell Masters es una plataforma web vanguardista, concebida para transformar el panorama de las ventas en el ámbito de las pequeñas y medianas empresas. Este sistema integral busca superar los desafíos que enfrentan estos negocios, abriendo caminos para ampliar su mercado, perfeccionar sus operaciones de venta y gestión de inventario, y analizar de manera eficaz el comportamiento del mercado y las tendencias de ventas, con el fin de optimizar sus procesos y maximizar sus ganancias.</p>
+                    <p>Fast Gym es tu compañero definitivo en el camino hacia un estilo de vida más activo y saludable. Utilizamos tecnología de punta para ofrecerte una experiencia personalizada que te ayuda a alcanzar tus objetivos deportivos y de bienestar.</p>
+                    <p>Nuestra visión es liderar la revolución tecnológica en el mundo del fitness, asegurando que cada producto y servicio mejore tu salud y rendimiento. Comprometidos con la excelencia, nuestro equipo trabaja incansablemente para que tu experiencia sea única y motivadora.</p>
                 </div>
             </div>
         </section>
+        
+        
 
         <!-- Seccion de Reseñas -->
         <section class="about-reviews" id="reviews">
@@ -109,25 +114,25 @@
             <div class="container-card">
                 <div class="element-card">
                     <div>
-                        <img src="./public/assets/img/rostro1.jpg" alt="img">
+                        <img src="./assets/img/rostro1.jpg" alt="img">
                         <h3>John Doe</h3>
-                        <p>Soy un empleado de ventas, y Sell Master me ha ayudado a mejorar mi rendimiento laboral, ofreciendo su plataforma para administrar mejor los productos de la empresa en la que trabajo. ¡Gracias Sell Master!</p>
+                        <p>Soy un empleado de ventas, y Fast Gym me ha ayudado a mejorar mi rendimiento laboral, ofreciendo su plataforma para administrar mejor los productos de la empresa en la que trabajo. ¡Gracias Fast Gym!</p>
                     </div>
                 </div>
 
                 <div class="element-card">
                     <div>
-                        <img src="./public/assets/img/rostro2.avif" alt="img">
+                        <img src="./assets/img/rostro2.avif" alt="img">
                         <h3>Jessica Fagan</h3>
-                        <p>Soy una empresaria que ha visto crecer su negocio gracias a Sell Master. Con su plataforma, he podido expandir mi mercado y mejorar la gestión de mis ventas. ¡Gracias Sell Master!</p>
+                        <p>Soy una empresaria que ha visto crecer su negocio gracias a Fast Gym. Con su plataforma, he podido expandir mi mercado y mejorar la gestión de mis ventas. ¡Gracias Fast Gym!</p>
                     </div>
                 </div>
 
                 <div class="element-card">
                     <div>
-                        <img src="./public/assets/img/rostro3.avif" alt="img">
+                        <img src="./assets/img/rostro3.avif" alt="img">
                         <h3>Michael Smith</h3>
-                        <p>Soy un analista de datos y he visto cómo Sell Master ha revolucionado la manera en que las empresas gestionan sus ventas. Con su plataforma, he podido analizar de manera eficaz el comportamiento del mercado y las tendencias de ventas. ¡Gracias Sell Master!</p>
+                        <p>Soy un analista de datos y he visto cómo Fast Gym ha revolucionado la manera en que las empresas gestionan sus ventas. Con su plataforma, he podido analizar de manera eficaz el comportamiento del mercado y las tendencias de ventas. ¡Gracias Fast Gym!</p>
                     </div>
                 </div>
             </div>
@@ -141,7 +146,7 @@
             <div class="contact-container">
                 <h3>Contáctanos</h3>
                 <div class="contact-subtitulo">
-                    <p>Envia un mensaje directo a ControlProyect.</p>
+                    <p>Envia un mensaje directo a FastGym.</p>
                 </div>
 
                 <form class="contact-form" action="contact-us">
@@ -182,7 +187,7 @@
             <div class="contact-us footer-component">
                 <p>Contáctanos</p>
                 <p>Correo:</p>
-                <p>sellMaster@gmail.com</p>
+                <p>fasgym@gmail.com</p>
                 <p>Teléfono:</p>
                 <p>987654321</p>
             </div>
@@ -210,9 +215,11 @@
                 </div>
             </div>
         </div>
-        <p>© 2024 SellMaster</p>
+        <p>© 2024 FastGym</p>
     </footer>
     <script src="./public/scripts/script.js"></script>
     <script src="./public/scripts/contact.js"></script>
+    <script src="./scripts/about-us.js"></script>
+    <script src="./scripts/home.js"></script>
 </body>
 </html>
