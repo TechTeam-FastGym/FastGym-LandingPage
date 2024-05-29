@@ -15,11 +15,10 @@ body{
 
 
 /* contenido main */
-.hero-container{
-    background: url('../assets/img/fondo.png') no-repeat center center;
-
+.hero-container {
+    background: url('../assets/img/fondo.jpg') no-repeat center center/cover;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado a min-height para mejor adaptación en móviles */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,28 +28,24 @@ body{
 }
 
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: left;
-    position: absolute;
-    top: 7rem;
-    left: 6rem;
+    text-align: center;
+    padding: 0 1rem; /* Reducido el padding en móviles */
 }
 
 .hero-text h1 {
-    color: #517f7c;
-    font-size: 7rem;
+    color: #0086BF;
+    font-size: 2.5rem; /* Reducido el tamaño de fuente en móviles */
     font-style: normal;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .hero-text p {
-    color : #517f7c;
-    width: 40vw;
-    font-size: 1.5rem;
+    color: #0086BF;
+    font-size: 1rem; /* Reducido el tamaño de fuente en móviles */
     font-weight: 600;
-    letter-spacing: 0.015rem;;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 .btn-hero {
@@ -59,28 +54,65 @@ body{
     color: #fff;
     text-align: center;
     vertical-align: middle;
-
-    background-color: #517f7c;
-    padding : 1rem 2rem;
-    font-size: 1.2rem;
-    line-height: 1.5;
+    background-color: #0086BF;
+    padding: 0.8rem 1.5rem; /* Ajustado el padding en móviles */
+    font-size: 1rem; /* Reducido el tamaño de fuente en móviles */
     border-radius: 1.2rem;
     border: none;
-
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 .btn-hero:hover {
-    background-color: #8bcac7;
-    color: #517f7c;
-    transform: perspective(1px) scale(1.1);
-    transition: all 0.2s ease-in-out;
+    background-color: #72b6d3;
+    color: #ffffff;
+    transform: scale(1.1);
 }
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+    
+    
+    .hero-text {
+        padding: 0 4rem;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem; /* Ajustado para tabletas */
+        color: #0086BF;
+
+    }
+
+    .hero-text p {
+        font-size: 1.2rem; /* Ajustado para tabletas */
+        color: #0086BF;
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero-text {
+        padding: 0 8rem;
+        color: #0086BF;
+    }
+
+    .hero-text h1 {
+        font-size: 5rem; /* Ajustado para escritorio */
+        color: #0086BF;
+    }
+
+    .hero-text p {
+        font-size: 1.4rem; /* Ajustado para escritorio */
+        color: #0086BF;
+
+    }
+}
+
+
 
 /* ******------- seccion Producto - ¿QUÉ OFRECEMOS? -----------*****/
 .card-container {
-    background-color: #517f7c;
+    background-color: #0086BF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -197,18 +229,74 @@ body{
     letter-spacing: 0.04em;
 
     color: #fff;
-    background-color: #517f7c;
+    background-color: #0086BF;
     border-radius: 1.2rem;
 
     transition: all 0.2s ease-in-out;
 }
 
 .container-card .element-card button:hover{
-    background-color: #62999a;
+    background-color: #5ec1eb;
     color: #ffffff;
     transform: perspective(1rem) scale(1.1);
     transition: all 0.2s ease-in-out;
 }
+
+/* Media query para dispositivos con un ancho máximo de 768px */
+@media screen and (max-width: 768px) {
+    .card-container {
+        min-height: auto; /* Remover altura mínima para adaptarse mejor a dispositivos más pequeños */
+        padding: 2rem; /* Añadir un poco de espacio interno */
+    }
+
+    .card-container h2 {
+        font-size: 2rem; /* Reducir el tamaño del título */
+        padding-top: 1.5rem; /* Ajustar el espaciado superior */
+    }
+
+    .card-container p {
+        font-size: 1.25rem; /* Reducir el tamaño del texto */
+        max-width: 100%; /* Hacer que el texto sea completamente responsivo */
+    }
+
+    .container-card {
+        flex-direction: column; /* Cambiar a una disposición de columna para una mejor adaptabilidad */
+        align-items: center; /* Centrar elementos horizontalmente */
+        gap: 2rem; /* Añadir espacio entre las tarjetas */
+        margin: 1rem 0; /* Ajustar el margen */
+        
+    }
+
+    .container-card .element-card {
+        width: 100%; /* Ancho completo para las tarjetas */
+        max-width: 30rem; /* Limitar el ancho máximo */
+        line-height: normal;
+    }
+
+    .container-card .element-card p {
+        font-size: 1rem; /* Reducir el tamaño del texto */
+        letter-spacing: normal;
+    }
+
+    .container-card .element-card h3 {
+        font-size: 1rem; /* Reducir el tamaño del texto */
+        letter-spacing: normal;
+    }
+
+    .container-card .element-card img {
+        width: 100%; /* Ancho completo para las imágenes */
+        height: auto; /* Altura automática */
+        border-radius: 1.2rem; /* Mantener bordes redondeados */
+    }
+}
+
+/* Media query para dispositivos con un ancho mínimo de 992px */
+@media screen and (min-width: 992px) {
+    .container-card .element-card {
+        max-width: calc(50% - 1rem); /* Limitar el ancho de las tarjetas al 50% del contenedor con un pequeño espacio entre ellas */
+    }
+}
+
 
 /* --------******** section ¿QUIÉNES SOMOS? ----------******** */
 .about-container {
@@ -224,7 +312,7 @@ body{
 
 .about-container .about-text{
     margin-top: 4rem;
-    background-color: #517f7c;
+    background-color: #0086BF;
     border-radius: 1.2rem;
     padding: 3rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -232,7 +320,7 @@ body{
 
 .about-container h2 {
     padding-top: 2.7rem;
-    color: #517f7c;
+    color: #0086BF;
     font-size: 4.4rem;
     font-style: normal;
     font-weight: 700;
@@ -273,12 +361,58 @@ body{
     animation: fadeIn 1.4s ease-out forwards;
 }
 
+/* Media query para dispositivos con un ancho máximo de 768px */
+@media screen and (max-width: 768px) {
+    .about-container {
+        min-height: auto; /* Remover la altura mínima para adaptarse mejor a dispositivos más pequeños */
+        padding: 2rem; /* Añadir un poco de espacio interno */
+    }
+
+    .about-container h2 {
+        font-size: 3rem; /* Reducir el tamaño del título */
+        padding-top: 1.5rem; /* Ajustar el espaciado superior */
+    }
+
+    .about-container p {
+        font-size: 1rem; /* Reducir el tamaño del texto */
+    }
+
+    .about-container .about-text {
+        margin-top: 2rem; /* Ajustar el margen superior */
+        padding: 2rem; /* Reducir el espacio interno del texto */
+    }
+
+    .about-container .about-content {
+        flex-direction: column; /* Cambiar a una disposición de columna para una mejor adaptabilidad */
+        align-items: center; /* Centrar elementos horizontalmente */
+        gap: 2rem; /* Añadir espacio entre elementos */
+    }
+
+    .about-container .about-content img {
+        height: auto; /* Altura automática para la imagen */
+        max-height: 20rem; /* Limitar la altura máxima */
+        border-radius: 10px; /* Mantener bordes suavizados */
+    }
+}
+
+/* Media query para dispositivos con un ancho mínimo de 992px */
+@media screen and (min-width: 992px) {
+    .about-container .about-content {
+        justify-content: space-between; /* Espaciar uniformemente los elementos */
+    }
+
+    .about-container .about-content img {
+        max-width: 45%; /* Limitar el ancho de la imagen */
+        max-height: 25rem; /* Limitar la altura máxima */
+    }
+}
+
 
 
 /* --------******** section ¿QUÉ DICEN LOS USUARIOS?----------******** */
 
 .about-reviews {
-    background-color: #517f7c;
+    background-color: #0086BF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -304,6 +438,24 @@ body{
     font-weight: 500;
     letter-spacing: 0.0315rem;
     text-align: center;
+}
+
+/* Media query para dispositivos con un ancho máximo de 768px */
+@media screen and (max-width: 768px) {
+    .about-reviews {
+        min-height: auto; /* Remover la altura mínima para adaptarse mejor a dispositivos más pequeños */
+        padding: 2rem; /* Añadir un poco de espacio interno */
+    }
+
+    .about-reviews h2 {
+        font-size: 3rem; /* Reducir el tamaño del título */
+        padding-top: 1.5rem; /* Ajustar el espaciado superior */
+    }
+
+    .about-reviews p {
+        font-size: 1.25rem; /* Reducir el tamaño del texto */
+        width: auto; /* Hacer que el ancho del párrafo sea automático */
+    }
 }
 
 
@@ -339,13 +491,7 @@ body{
     text-align: center;
 }
 
-.text-wrapper p {
-    width: 50vw;
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 0.0315rem;
-    text-align: center;
-}
+
 
 .container-card-prices {
     display: flex;
@@ -403,38 +549,35 @@ body{
 /* --------******** section CONTACTANOS ----------******** */
 .contact {
     background-color: #ffffff;
-    height: 100vh;
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-
-
 .contact-container {
-    background-color: #cfe7e5;
-    
+    background-color: #dff2ff;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 2rem;
-    position: absolute;
-    padding: 3rem;
-
+    position: relative;
+    padding: 2rem;
     border-radius: 1.3rem;
-    box-shadow: 0 0.1rem 2rem #517f7c;
+    box-shadow: 0 0.1rem 2rem #a3def8;
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
 }
 
 .contact-container h3 {
-    color: #517f7c;
-    font-size: 3rem;
+    color: #0086BF;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0.0315rem;
@@ -442,8 +585,8 @@ body{
 }
 
 .contact-subtitulo {
-    color: #517f7c;
-    font-size: 1.5rem;
+    color: #0086BF;
+    font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 0.03125rem;
 }
@@ -452,61 +595,34 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: left;  
+    align-items: flex-start;
     gap: 1rem;
-
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.03125rem;
 }
 
-.contact-container .contact-form input[type="text"] {
-    width: 100%;
-    height: 3rem;
-    padding: 1rem;
-    border-radius: 1.2rem;
-    gap: 2rem;
-    outline: none;
-}
-
-.contact-container .contact-form input[type="text"]:focus {
-    border: 1px solid #517f7c;
-    box-shadow: 0 0.5rem 1rem #517f7c;
-    transition: all 0.1s ease-in-out;
-}
-
-.contact-container .contact-form input[type="email"] {
-    width: 100%;
-    height: 3rem;
-    padding: 1rem;
-    border-radius: 1.2rem;
-    outline: none;
-}
-
-.contact-container .contact-form input[type="email"]:focus {
-    border: 1px solid #517f7c;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    transition: all 0.1s ease-in-out;
-}
-
-
+.contact-container .contact-form input[type="text"],
+.contact-container .contact-form input[type="email"],
 .contact-container .contact-form textarea {
     width: 100%;
-    height: 10rem;
     padding: 1rem;
     border-radius: 1.2rem;
-    resize: none;
     outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
+.contact-container .contact-form input[type="text"]:focus,
+.contact-container .contact-form input[type="email"]:focus,
 .contact-container .contact-form textarea:focus {
-    border: 1px solid #111d3b;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border: 1px solid #0086BF;
+    box-shadow: 0 0.5rem 1rem rgba(0, 134, 191, 0.3);
     transition: all 0.1s ease-in-out;
 }
 
 .contact-container .contact-form button[type="submit"] {
-    background-color: #517f7c;
+    background-color: #0086BF;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -514,26 +630,25 @@ body{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 1.2rem;
-
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.03125rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-
-
-/* mostrar alerta de js (requerido) */
+/* Mostrar alerta de js (requerido) */
 .bg-red-600 {
     background-color: rgba(220, 38, 38, 0.797);
 }
 
 .text-white {
-    color: rgb(255, 255, 255)
+    color: rgb(255, 255, 255);
 }
 
 .p-alert {  
     padding: .2rem;
-    font-size:1rem;
+    font-size: 1rem;
     border-radius: 3rem;
 }
 
@@ -545,377 +660,45 @@ body{
     gap: 2rem;
 }
 
-
-
-/* ***************** SECTION RESPONSIVE *******************/
-/******************* vista grande *********************/
-@media screen and (max-width:1440px){
-    .ul {
-        gap: 1rem;
-    }
-
-
-    /********* seccion principal **********/
-    .hero-text {
-        gap: 1rem;
-        top: 4rem;
-        left: 5rem;
-    }
-
-    .hero-text h1 {
-        color: #185584;
-        font-size: 6rem;
-        font-style: normal;
-        font-weight: 700;
-    }
-    
-    .hero-text p {
-        color: #185584;
-        width: 50vw;
-        font-size: 1.6rem;
-        font-weight: 500;
-        letter-spacing: 0.03125rem;
-    }
-
-
-    /********* seccion ¿quienes somos? **********/
-    .about-container .about-content {
-        flex-direction: column;
-        gap: 2rem;
-        font-size: 0.5rem;
-    }
-
-    .about-container h2 {        
-        max-width: 100%;
-        text-align: center;
-        right: 50%;
-    }
-
-
-    .about-container .about-content img{
-        width: 5rem;
-        height: 5rem;
-    }
-
-    .card-container h2 {
-        font-size: 4rem;
-    }
-
-    .text-wrapper p {
-        width: 70vw;
-        font-size: 1.6rem;
-    }
-
-    .card-container-prices h2 {
-        font-size: 4rem;
-    }
-
-}
-
-@media screen and (max-width:1024px){
-    header nav {
-        display: flex;
-        justify-content: space-between;
+/* Media Queries */
+@media (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+        padding: 3rem;
+        justify-content: center;
         align-items: center;
-        padding: 0 20px;
-        height: 80px;
-    }
-
-    .ul{
-        display: none;
-    }
-
-    .hero-text {
-        gap: 1rem;
-        top: 3.5rem;
-        left: 3rem;
-    }
-}
-
-
-@media screen and (max-width:768px){
-
-    /* falta hacer menu hamburguesa */
-    header nav {
-        display: flex;
-    }
-
-    /* main */
-
-    .container-card .element-card {
-        width: 90%;
-    }
-
-    .container-card-2 .element-card-2 {
-        width: 90%;
-    }
-}
-
-@media screen and (max-width:660px){
-    .hero-text {
-        gap: 1rem;
-        top: 5rem;
-        left: 5rem;
-    }
-
-    .hero-text h1 {
-        color: #185584;
-        font-size: 4rem;
-        font-style: normal;
-        font-weight: 700;
-    }
-    
-    .hero-text p {
-        color: #185584;
-        width: 70vw;
-        font-size: 1.5rem;
-        font-weight: 500;
-        letter-spacing: 0.03125rem;
-    }
-
-    /*section quienes somos */
-    .about-container .about-content {
-        flex-direction: column;
-        gap: 2rem;
-        font-size: 0.5rem;
-    }
-
-    .about-container h2 {        
-        max-width: 100%;
-        text-align: center;
-        right: 50%;
-        font-size: 3rem;
-    }
-
-    .about-container .about-content img{
-        width: 5rem;
-        height: 5rem;
-    }
-
-    /*section que ofrecemos como empresa */
-    .card-container h2 {
-        font-size: 3rem;
-    }
-
-    .text-wrapper p {
-        width: 70vw;
-        font-size: 1.5rem;
-    }
-
-    /*section ¿que dicen nuestros usuarios */
-    .about-reviews h2 {
-        font-size: 3rem;
-    }
-
-    .about-reviews p {
-        font-size: 1.5rem;
-    }
-
-    /*section prices */
-
-    .card-container-prices h2 {
-        font-size: 3rem;
-    }
-
-    .container-card-prices .element-card-prices {
-        width: 80%;
-    }
-
-    .container-card-prices .element-card-prices h3{
-        font-size: 2rem;
-    }
-
-    /*section contact */
-    .contact-container {
-        padding: 1rem;
-        width: 80%;
     }
 
     .contact-container h3 {
-        font-size: 2rem;
+        font-size: 3rem;
+        flex: 1 100%;
     }
 
-    .contact-container p {
-        font-size: 1rem;
+    .contact-subtitulo {
+        font-size: 1.5rem;
     }
 
     .contact-container .contact-form {
-        font-size: 0.8rem;
-    }
-
-    .contact-container .contact-form input[type="text"] {
-        height: 3rem;
-        padding: 0.5rem;
-    }
-
-    .contact-container .contact-form input[type="email"] {
-        height: 3rem;
-        padding: 0.5rem;
-    }
-
-    .contact-container .contact-form textarea {
-        width: 100%;
-        height: 5rem;
-        padding: 0.5rem;
-    }
-
-
-}
-
-
-@media (max-width:480px) {
-
-    .hero-text {
-        gap: 1rem;
-        top: 5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        color: #333;
-        font-size: 4rem;
-        font-style: normal;
-        font-weight: 700;
-    }
-    
-    .hero-text p {
-        color: #031446;
-        width: inherit;
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-
-    .about-container .about-content {
-        flex-direction: column;
-        gap: 2rem;
-        font-size: 0.5rem;
-    }
-
-    .about-container h2 {        
-        max-width: 100%;
-        text-align: center;
-        right: 50%;
-        font-size: 3rem;
-    }
-
-    .about-container .about-content img{
-        width: 5rem;
-        height: 5rem;
-    }
-
-    /*seccion ¿que dicen nuestros usuarios */
-    .about-reviews h2 {
-        font-size: 3rem;
-    }
-
-    .about-reviews p {
-        font-size: 1.5rem;
-    }
-
-    /* seccion precios */
-    .card-container-prices h2 {
-        font-size: 3rem;
-    }
-
-    .text-wrapper p {
-        width: 100vw;
-        font-size: 1.5rem;
-    }
-
-    .container-card-prices .element-card-prices{
-        width: 80%;
-    }
-
-    .container-card-prices .element-card-prices h3{
-        font-size: 2rem;
-    }
-
-    .container-card-prices .element-card-prices p{
-        font-size: 1rem;
-    }
-
-    /* seccion contacto */
-    .contact-container {
-        padding: 1rem;
-        width: 80%;
-    }
-
-    .contact-container h3 {
-        font-size: 2rem;
-    }
-
-    .contact-container p {
-        font-size: 1rem;
-    }
-
-    .contact-container .contact-form {
-        font-size: 0.8rem;
-    }
-
-    .contact-container .contact-form input[type="text"] {
-        height: 2rem;
-        padding: 0.5rem;
-    }
-
-    .contact-container .contact-form input[type="email"] {
-        height: 2rem;
-        padding: 0.5rem;
-    }
-
-    .contact-container .contact-form textarea {
-        width: 70vw;
-        height: 5rem;
-        padding: 0.5rem;
+        flex: 1 100%;
+        max-width: 400px;
     }
 
     .contact-container .contact-form button[type="submit"] {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
+        width: auto;
     }
+}
 
-
-
-
-    .card-container h2 {
-        font-size: 2.2rem;
-    }
-    
-
-    .card h3 {
+@media (max-width: 480px) {
+    .contact-container h3 {
         font-size: 1.5rem;
     }
-    
-    .card p {
+
+    .contact-subtitulo {
         font-size: 1rem;
     }
 
-    .cards-container h2 {
-        font-size: 3rem;
+    .contact-container .contact-form button[type="submit"] {
+        font-size: 0.875rem;
     }
-
-    .text-wrapper p {
-        width: 90vw;
-        font-size: 1.2rem;
-    }
-
-    .cards-container-2 h2 {
-        font-size: 3rem;
-    }
-
-    .container-card .element-card {
-        width: 90%;
-    }
-
-    .container-card .element-card  button{
-        width: 90%;
-    }
-
-    .container-card-2 .element-card-2 {
-        width: 90%;
-    }
-
-    
-
 }
