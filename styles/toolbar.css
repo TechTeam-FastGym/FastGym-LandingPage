@@ -1,16 +1,31 @@
-/* style for toolbar*/
-header nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 20px;
-    height: 80px;
-    background-color: #517f7c;
-    color: #ffffff;
+/* styles/style.css */
+
+/* Estilo para la barra de navegación */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 10;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+header.hide {
+    top: -80px;
     
 }
 
 
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    background-color: #00425e;
+    color: #ffffff;
+}
 
 ul {
     display: flex;
@@ -41,4 +56,60 @@ header li a:hover {
     color: rgba(9, 37, 44, 0.483);
     transform: perspective(1rem) scale(1.1);
     transition: all 0.2s ease-in-out;
+}
+
+/* Estilo del menú hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Cambiado a blanco para que se vea en el fondo de la barra de navegación */
+}
+
+/* Estilo predeterminado para la navegación */
+.nav-links,
+.auth-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+    .nav-links,
+    .auth-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #00425e; /* Fondo del mismo color que la barra de navegación */
+        position: absolute;
+        top: 60px; /* Ajustar según la altura de tu header */
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 10px 0; /* Añadido padding para mejor apariencia */
+        max-height: fit-content;
+    }
+
+    .nav-links.active,
+    .auth-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hamburger .bar {
+        background-color: #fff; /* Cambiado a blanco para visibilidad */
+    }
 }
