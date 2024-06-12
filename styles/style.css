@@ -407,6 +407,68 @@ body{
     }
 }
 
+/* seccion captura mobile */
+.app-preview {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ebebeb;
+}
+
+.app-preview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.app-preview .imgs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.app-preview .imgs img {
+    width: 100%;
+    max-width: 10%;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.324);
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .app-preview h2 {
+        font-size: 1.2rem;
+    }
+
+    .app-preview .imgs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .app-preview .imgs img {
+        max-width: 60%;
+        /*centrar las imagenes*/
+        margin: 0 auto;
+    
+    }
+}
+
+@media (max-width: 480px) {
+    .app-preview h2 {
+        font-size: 1rem;
+    }
+
+    .app-preview .imgs img {
+        max-width: 60%;
+        /*centrar las imagenes*/
+        margin: 0 auto;
+
+
+    }
+}
+
 
 
 /* --------******** section ¿QUÉ DICEN LOS USUARIOS?----------******** */
