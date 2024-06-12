@@ -764,3 +764,90 @@ body{
         font-size: 0.875rem;
     }
 }
+
+/* Section for about the team/about the product */
+.landing-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #f0f0f0;
+}
+
+.section-part {
+    flex: 1;
+    min-width: 300px; /* Ensure a minimum width for smaller screens */
+    max-width: 45%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.section-part h2 {
+    color: #0086BF;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-part p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.video-placeholder iframe {
+    width: 100%;
+    height: 315px; /* Fixed height to maintain aspect ratio */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .landing-section {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .section-part {
+        max-width: 100%;
+    }
+
+    .section-part h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-part p {
+        font-size: 1rem;
+    }
+
+    .video-placeholder iframe {
+        height: auto; /* Adjust height for better responsiveness */
+        min-height: 200px; /* Minimum height for smaller screens */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .landing-section {
+        padding: 3rem;
+    }
+
+    .section-part h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-part p {
+        font-size: 1.4rem;
+    }
+
+    .video-placeholder iframe {
+        height: 360px; /* Larger height for bigger screens */
+    }
+}
